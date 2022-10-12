@@ -22,6 +22,7 @@ Required Attributes:
 - "width" - The width to make the video player
 - "poster" - Url of the image to show when loading video
 - "attributes" - Any additional attributes you may wish to add to the video element
+- "custom_video_file" - set the default name for the file mpd or m3u8: default is: "dash"
 # Require for subtitles:
 - "subs" - Uri for Subs vtt file
 - "subs_label" - Label for subtitles, example: fr-CA:French or en-US:English
