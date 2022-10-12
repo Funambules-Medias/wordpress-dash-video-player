@@ -21,6 +21,7 @@ function shaka_player_shortcode( $atts ) {
     'subtitles' => 'true',
     'subs' => NULL,
     'subs_label' => NULL,
+    'custom_video_file' => NULL,
   ), $atts );
   $a['subtitles'] = filter_var($a['subtitles'], FILTER_VALIDATE_BOOLEAN);
 

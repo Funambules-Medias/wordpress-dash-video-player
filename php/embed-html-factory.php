@@ -5,7 +5,7 @@ include( PLUGIN_PATH . 'php/determine-manifest-type.php' );
 function embed_html_factory($atts) {
     $id = 'id="video" '; // ID is always video
     $uriBase = $atts['source'] . '/';
-    $manifestUri = 'manifestUri='.$uriBase.determine_manifest_type().' ';
+    $manifestUri = 'manifestUri='.$uriBase.determine_manifest_type($atts['custom_video_file']).' ';
 
     // Handle base attributes
     $width = $atts['width'] ? 'width=' . $atts['width'] . ' ' : '';

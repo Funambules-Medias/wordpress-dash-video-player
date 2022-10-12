@@ -7,8 +7,9 @@
  * 
  * HLS must always be used on iOS devices, and on Macs that are _not_ using Chrome
  */
-function determine_manifest_type() {
-  $manifestType = 'dash.mpd';
+function determine_manifest_type($custom_video_file = 'dash') {
+  $custom_video_file = ($custom_video_file != NULL) ? $custom_video_file : 'dash';
+  $manifestType = $custom_video_file.'.mpd';
 
   // Try to determine if the user is on Mac
   $isMac = false;
@@ -23,7 +24,7 @@ function determine_manifest_type() {
 
   // Determine if we should use HLS
   if ($is_iphone || ($isMac && !$is_chrome)) {
-    $manifestType = 'hls.m3u8';
+    $manifestType = $custom_video_file.'.m3u8';
   }
 
   return $manifestType;
