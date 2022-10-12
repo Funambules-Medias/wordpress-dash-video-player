@@ -2,6 +2,12 @@
 
 Adds shortcodes that can be used to embed Shaka Player videos
 
+Example Usage:
+
+``
+[shaka-player source="wp-content/videos/movie" poster="wp-content/videos/movie.jpg" subs="wp-content/videos/movie/subs.vtt" subs_label="fr-CA:French"]
+``
+
 == Description ==
 # Use
 Add the [shaka_player] shortcode that will automatically embed the Shaka Player
