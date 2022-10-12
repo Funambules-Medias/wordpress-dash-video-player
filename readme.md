@@ -5,7 +5,7 @@ Adds shortcodes that can be used to embed Shaka Player videos
 Example Usage:
 
 ``
-[shaka_player source="wp-content/videos/movie" poster="wp-content/videos/movie.jpg" subs="wp-content/videos/movie/subs.vtt" subs_label="fr-CA:French"]
+[shaka_player source="wp-content/videos/movie" poster="wp-content/videos/movie.jpg" subs="wp-content/videos/movie/subs.vtt" subs_label="fr-CA:French" custom_video_file="main"]
 ``
 
 == Description ==
