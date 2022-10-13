@@ -15,7 +15,7 @@ function embed_html_factory($atts) {
 
     $subs = $atts['subs'];
     $subs_label = ($atts['subs_label'] != NULL) ? $atts['subs_label'] : 'Frances:fr-CA';
-     list($sub_lang, $sub_label) = explode(':', $subs_label);
+    list($sub_lang, $sub_label) = explode(':', $subs_label);
 
     // Handle subtitle attributes
     $subtitleAttributes = '';
@@ -35,13 +35,13 @@ function embed_html_factory($atts) {
     }
 
 
-    $embedHtml  = '<div data-shaka-player-container style="max-width:40em">';
+    $embedHtml  = '<div data-shaka-player-container style="max-width:100%">';
     $embedHtml .= '<video autoplay data-shaka-player ' . $id . $manifestUri . $width . $poster . $subtitleAttributes . $attributes . ' controlsList=nodownload crossorigin=anonymous>';
     //if($subs != null) {
     //    $embedHtml .= '<track kind="captions" label="'.$sub_label.'" srclang="'.$sub_lang.'" src="'.$subs.'">';
-   // }
+    // }
     $embedHtml .= '</video></div>';
 
 
-  return $embedHtml;
+    return $embedHtml;
 }
